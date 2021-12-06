@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head> 
+    <title>CV</title> 
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+    <table>
+    <thead>
+   	 <tr>
+    	<th> Functie </th>
+    	<th> Perioada </th>
+    	<th> Companie </th>
+    	<th> Descriere </th>
+    	
+    	</tr>
+    </thead>
+    <tbody>
+    	<tr th:each "m : ${exp}">
+    	<td>span th:text="${m.functie}"> Functie </span></td>
+    	</tr>
+    </tbody>
+  </table>
+</body>
+</html>
