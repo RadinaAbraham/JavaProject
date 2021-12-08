@@ -15,11 +15,13 @@
     	
     	</tr>
     </thead>
+
     <tbody>
-    	<tr th:each "m : ${exp}">
-    	<td>span th:text="${m.functie}"> Functie </span></td>
+    	<tr th:each="m : ${exp}">
+    	<td><span th:text="${m.functie}"> Functie </span></td>
     	</tr>
     </tbody>
+
   </table>
 </body>
 </html>
