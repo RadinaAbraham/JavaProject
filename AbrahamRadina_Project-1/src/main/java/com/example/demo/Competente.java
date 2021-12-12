@@ -1,29 +1,48 @@
 package com.example.demo;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Competente {
-	private String categorie;
-	private String aptitudine;
 	
-	public Competente(String categorie, String aptitudine) {
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	private Long id;
+
+	private String aptitudine;
+
+	public Competente() {
 		super();
-		this.categorie = categorie;
+	}
+
+	public Competente(String aptitudine) {
+		super();
 		this.aptitudine = aptitudine;
 	}
-	public String getCategorie() {
-		return categorie;
+
+	public Long getId() {
+		return id;
 	}
-	public void setCategorie(String categorie) {
-		this.categorie = categorie;
+
+	public void setId(Long id) {
+		this.id = id;
 	}
+	
 	public String getAptitudine() {
 		return aptitudine;
 	}
+
 	public void setAptitudine(String aptitudine) {
 		this.aptitudine = aptitudine;
 	}
+
 	@Override
 	public String toString() {
-		return "Competente [categorie=" + categorie + ", aptitudine=" + aptitudine + "]";
+		return "Competente [aptitudine=" + aptitudine + "]";
 	}
+	
 	
 }
