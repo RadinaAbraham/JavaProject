@@ -1,11 +1,25 @@
 package com.example.demo;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Educatie {
+	
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	private Long id;
+	
 	private String tip;
 	private String specializare;
 	private String institutie;
 	private String perioada;
 	
+	public Educatie() {
+		super();
+	}
 	public Educatie(String tip, String specializare, String institutie, String perioada) {
 		super();
 		this.tip = tip;

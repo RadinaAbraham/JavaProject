@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{layout}">
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Add About</title>
+</head>
+
+<!-- Content Section -->
+<section layout:fragment="content">
+
+	<body>
+		<h2 class="text-center">Add About</h2>
+		<form action="/addAbout" th:object="${about}" class="form"
+			method="post">
+
+			<div class="row">
+				<div class="form-group col-6">
+					<label>Scop</label> 
+					<input class="form-control" name="scop" th:value="${about?.scop}" />
+				</div>
+				<div class="form-group col-6">
+					<label>Descriere</label> 
+					<input class="form-control" name="descriere" th:value="${about?.descriere}" />
+				</div>
+			</div>
+	
+			<div class="row">
+				<div class="col">
+					<button type="submit" class="btn btn-success btn-block">Add About</button>
+				</div>
+			</div>
+			
+			 
+		</form>
+		
+		<tr>
+    <button onclick="window.location.href='about'">
+  Inapoi in sectiunea "Despre Mine"
+</button></tr>
+	</body>
+</html>

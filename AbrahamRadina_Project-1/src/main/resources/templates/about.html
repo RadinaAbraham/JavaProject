@@ -1,31 +1,35 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
 <head> 
-    <title>Competente</title> 
+    <title>Despre Mine</title> 
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>    
      <table>
     <thead>
    	 <tr>
-    	<th> Competente </th>
+    <th> Scop </th>
+    	<th> Descriere </th>
     	
     	</tr>
     </thead>
 
     <tbody>
-    	<tr th:each="r : ${comp}">
-    	<td><span th:text="${r.aptitudine}"> Competente </span></td>
+    	<tr th:each="r : ${about}">
+    	<td><span th:text="${r.scop}"> scop </span></td>
+    	<td><span th:text="${r.descriere}"> descriere </span></td>
+
     	
     	</tr>
+    	
     </tbody>
     
 
   </table>
    <tbody>
      <tr>
-    <button onclick="window.location.href='addComp'">
-  Adauga Aptitudine
+    <button onclick="window.location.href='addAbout'">
+  Adauga in sectiunea "Despre Mine"
 </button></tr>
  </tbody>
 </body>

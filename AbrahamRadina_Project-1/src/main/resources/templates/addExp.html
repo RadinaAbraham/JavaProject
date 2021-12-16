@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{layout}">
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Add Exp</title>
+</head>
+
+<!-- Content Section -->
+<section layout:fragment="content">
+
+	<body>
+		<h2 class="text-center">Adauga in sectiunea "Experienta"</h2>
+		<form action="/addExp" th:object="${exp}" class="form"
+			method="post">
+
+			<div class="row">
+				<div class="form-group col-6">
+					<label>Functie</label> 
+					<input class="form-control" name="functie" th:value="${exp?.functie}" />
+				</div>
+			</div>
+			<div class="row">
+				<div class="form-group col-6">
+					<label>Perioada</label> 
+					<input class="form-control" name="perioada" th:value="${exp?.perioada}" />
+				</div>
+			</div>
+			<div class="row">
+				<div class="form-group col-6">
+					<label>Companie</label> 
+					<input class="form-control" name="companie" th:value="${exp?.companie}" />
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="form-group col-6">
+					<label>Descriere</label> 
+					<input class="form-control" name="descriere" th:value="${exp?.descriere}" />
+				</div>
+			</div>
+	
+	
+			<div class="row">
+				<div class="col">
+					<button type="submit" class="btn btn-success btn-block">Adauga</button>
+				</div>
+			</div>
+		</form>
+		<tr>
+    <button onclick="window.location.href='exp'">
+  Inapoi in sectiunea "Experienta"
+</button></tr>
+	</body>
+</html>

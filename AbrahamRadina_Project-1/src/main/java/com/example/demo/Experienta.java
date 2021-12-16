@@ -1,12 +1,26 @@
 package com.example.demo;
 
-public class Experience {
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
+public class Experienta {
+	
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	private Long id;
+	
 	private String functie;
 	private String perioada;
 	private String companie;
 	private String descriere;
-
-	public Experience(String functie, String perioada, String companie, String descriere) {
+	
+	public Experienta() {
+		super();
+	}
+	public Experienta(String functie, String perioada, String companie, String descriere) {
 		super();
 		this.functie = functie;
 		this.perioada = perioada;
