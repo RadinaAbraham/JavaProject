@@ -4,54 +4,65 @@
 	layout:decorate="~{layout}">
 <html>
 <head>
+<style>
+  .row {
+  		align-content: center;
+  		text-align-last: center;
+  		 margin-left: 3rem;
+  		 margin-right: 10rem;
+      }
+         .subtitle {
+        color: black;
+        margin-left: 12rem;
+      }
+      </style>
 <meta charset="ISO-8859-1">
-<title>Add Edu</title>
+<title>Adauga in Educatie</title>
 </head>
 
 <!-- Content Section -->
 <section layout:fragment="content">
 
 	<body>
-		<h2 class="text-center">Adauga in sectiunea "Educatie"</h2>
+		<h1 style="list-style-type: none;font-weight: bold; color: black; padding-inline-start: 320px; margin-left: 19rem">Adauga in sectiunea "Educatie"</h1>
 		<form action="/addEdu" th:object="${edu}" class="form"
 			method="post">
 
 			<div class="row">
-				<div class="form-group col-6">
-					<label>Tip</label> 
-					<input class="form-control" name="tip" th:value="${edu?.tip}" />
+				<div style=" margin-bottom: 1rem">
+					<label class="subtitle" style="font-size : 20px">Tip</label> 
+					<input style=" margin-left: 5rem; height: 30px;width: 200px; background: white; align-content: center; color: pink; font-weight: bold; border-radius:10px" name="tip" th:value="${edu?.tip}" />
 				</div>
 			</div>
 			<div class="row">
-				<div class="form-group col-6">
-					<label>Specializare</label> 
-					<input class="form-control" name="specializare" th:value="${edu?.specializare}" />
+				<div style=" margin-bottom: 1rem">
+					<label class="subtitle" style="font-size : 20px">Specializare</label> 
+					<input style=" margin-left: 0.7rem; height: 30px;width: 200px; background: white; align-content: center; color: pink; font-weight: bold; border-radius:10px" name="specializare" th:value="${edu?.specializare}" />
 				</div>
 			</div>
 			<div class="row">
-				<div class="form-group col-6">
-					<label>Institutie</label> 
-					<input class="form-control" name="institutie" th:value="${edu?.institutie}" />
+				<div style=" margin-bottom: 1rem">
+					<label class="subtitle" style="font-size : 20px">Institutie</label> 
+					<input style=" margin-left: 2rem; height: 30px;width: 200px; background: white; align-content: center; color: pink; font-weight: bold; border-radius:10px" name="institutie" th:value="${edu?.institutie}" />
 				</div>
 			</div>
 			
 			<div class="row">
-				<div class="form-group col-6">
-					<label>Perioada</label> 
-					<input class="form-control" name="perioada" th:value="${edu?.perioada}" />
+				<div style=" margin-bottom: 1rem">
+					<label class="subtitle" style="font-size : 20px">Perioada</label> 
+					<input style=" margin-left: 2rem; height: 30px;width: 200px; background: white; align-content: center; color: pink; font-weight: bold; border-radius:10px" name="perioada" th:value="${edu?.perioada}" />
 				</div>
 			</div>
 	
-	
 			<div class="row">
 				<div class="col">
-					<button type="submit" class="btn btn-success btn-block">Adauga</button>
+					<button type="submit" class="btn btn-success btn-block" style=" margin-left: 12rem;margin-top: 1rem; height: 30px;width: 300px; background: pink; align-content: center; color: black; font-weight: bold; border-radius:20px">Adauga</button>
 				</div>
 			</div>
 		</form>
 		<tr>
-    <button onclick="window.location.href='edu'">
-  Inapoi in sectiunea "Educatie"
-</button></tr>
+       <button onclick="window.location.href='edu'" style=" margin-left: 40.7rem;margin-top: 1rem; height: 30px;width: 300px; background: pink; align-content: center; color: black; font-weight: bold; border-radius:20px">
+  			Inapoi in sectiunea "Educatie"
+		</button></tr>
 	</body>
 </html>

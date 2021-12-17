@@ -1,13 +1,28 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
 <head> 
+<style>
+     .row {
+        border: 3px solid #c3c3c3;
+  		align-content: center;
+  		text-align-last: center;
+  		 margin-left: 20rem;
+  		 margin-right: 10rem;
+      }
+         .subtitle {
+        color: black;
+        margin-left: 12rem;
+        margin-right: 12rem;
+      }
+      </style>
     <title>Experienta</title> 
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
+<h1 style="list-style-type: none;font-weight: bold; color: black; padding-inline-start: 320px; margin-left: 16rem">Experienta profesionala</h1>   
 <body>
-    <table>
+    <table class="row" style="height: 200px;width: 900px; background: pink; align-content: center; color: white; font-weight: bold; border-radius: 40px">
     <thead>
-   	 <tr>
+   	 <tr class="subtitle" style="font-size : 20px">
     	<th> Functie </th>
     	<th> Perioada </th>
     	<th> Companie </th>
@@ -29,7 +44,7 @@
   </table>
   <tbody>
      <tr>
-    <button onclick="window.location.href='addExp'">
+    <button onclick="window.location.href='addExp'" style=" margin-left: 37rem;margin-top: 3rem; height: 30px;width: 300px; background: pink; align-content: center; color: black; font-weight: bold; border-radius:20px">
   Adauga in sectiunea "Experienta"
 </button></tr>
  </tbody>

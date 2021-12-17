@@ -1,17 +1,26 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
 <head> 
+<style>
+     .row {
+        border: 3px solid #c3c3c3;
+  		align-content: center;
+  		text-align-last: center;
+  		 margin-left: 40rem;
+  		 margin-right: 10rem;
+      }
+         .subtitle {
+        color: black;
+        margin-left: 12rem;
+        margin-right: 12rem;
+      }
+      </style>
     <title>Competente</title> 
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
+<h1 style="list-style-type: none;font-weight: bold; color: black; padding-inline-start: 320px; margin-left: 21rem">Competente</h1>   
 <body>    
-     <table>
-    <thead>
-   	 <tr>
-    	<th> Competente </th>
-    	
-    	</tr>
-    </thead>
+     <table class="row" style="height: 200px;width: 200px; background: pink; align-content: center; color: white; font-weight: bold; border-radius: 40px">
 
     <tbody>
     	<tr th:each="r : ${comp}">
@@ -24,7 +33,7 @@
   </table>
    <tbody>
      <tr>
-    <button onclick="window.location.href='addComp'">
+     <button onclick="window.location.href='addComp'" style=" margin-left: 37rem;margin-top: 3rem; height: 30px;width: 300px; background: pink; align-content: center; color: black; font-weight: bold; border-radius:20px">
   Adauga Aptitudine
 </button></tr>
  </tbody>

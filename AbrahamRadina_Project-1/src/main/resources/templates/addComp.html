@@ -4,33 +4,45 @@
 	layout:decorate="~{layout}">
 <html>
 <head>
+<style>
+  .row {
+  		align-content: center;
+  		text-align-last: center;
+  		 margin-left: 3rem;
+  		 margin-right: 10rem;
+      }
+         .subtitle {
+        color: black;
+        margin-left: 12rem;
+      }
+      </style>
 <meta charset="ISO-8859-1">
-<title>Add Comp</title>
+<title>Adauga in "Competente"</title>
 </head>
 
 <!-- Content Section -->
 <section layout:fragment="content">
 
 	<body>
-		<h2 class="text-center">Adauga Aptitudini</h2>
+		<h1 style="list-style-type: none;font-weight: bold; color: black; padding-inline-start: 320px; margin-left: 19rem">Adauga in sectiunea "Competente"</h1>
 		<form action="/addComp" th:object="${comp}" class="form"
 			method="post">
 
 			<div class="row">
-				<div class="form-group col-6">
-					<label>Scop</label> 
-					<input class="form-control" name="aptitudine" th:value="${comp?.aptitudine}" />
+				<div class="form-group col-6" style=" margin-bottom: 1rem">
+					<label class="subtitle" style="font-size : 20px">Scop</label> 
+					<input style=" margin-left: 2rem; height: 30px;width: 200px; background: white; align-content: center; color: pink; font-weight: bold; border-radius:10px" name="aptitudine" th:value="${comp?.aptitudine}" />
 				</div>
 			</div>
 	
 			<div class="row">
 				<div class="col">
-					<button type="submit" class="btn btn-success btn-block">Adauga</button>
+					<button type="submit" class="btn btn-success btn-block" style=" margin-left: 12rem;margin-top: 1rem; height: 30px;width: 300px; background: pink; align-content: center; color: black; font-weight: bold; border-radius:20px">Adauga</button>
 				</div>
 			</div>
 		</form>
 		<tr>
-    <button onclick="window.location.href='comp'">
+   <button onclick="window.location.href='comp'" style=" margin-left: 40.7rem;margin-top: 1rem; height: 30px;width: 300px; background: pink; align-content: center; color: black; font-weight: bold; border-radius:20px">
   Inapoi in sectiunea "Competente"
 </button></tr>
 	</body>

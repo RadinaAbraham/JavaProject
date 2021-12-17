@@ -4,41 +4,51 @@
 	layout:decorate="~{layout}">
 <html>
 <head>
+<style>
+  .row {
+  		align-content: center;
+  		text-align-last: center;
+  		 margin-left: 3rem;
+  		 margin-right: 10rem;
+      }
+         .subtitle {
+        color: black;
+        margin-left: 12rem;
+      }
+      </style>
 <meta charset="ISO-8859-1">
-<title>Add About</title>
+<title>Adauga in "Despre mine"</title>
 </head>
 
 <!-- Content Section -->
 <section layout:fragment="content">
 
 	<body>
-		<h2 class="text-center">Add About</h2>
+		<h1 style="list-style-type: none;font-weight: bold; color: black; padding-inline-start: 320px; margin-left: 19rem">Adauga in sectiunea "Despre mine"</h1>
 		<form action="/addAbout" th:object="${about}" class="form"
 			method="post">
 
-			<div class="row">
-				<div class="form-group col-6">
-					<label>Scop</label> 
-					<input class="form-control" name="scop" th:value="${about?.scop}" />
+			<div class="row" >
+				<div class="form-group col-6" style=" margin-bottom: 1rem">
+					<label class="subtitle" style="font-size : 20px">Scop</label> 
+					<input class="form-control" style=" margin-left: 2rem; height: 30px;width: 200px; background: white; align-content: center; color: pink; font-weight: bold; border-radius:10px" name="scop" th:value="${about?.scop}" />
 				</div>
 				<div class="form-group col-6">
-					<label>Descriere</label> 
-					<input class="form-control" name="descriere" th:value="${about?.descriere}" />
+					<label class="subtitle" style="font-size : 20px">Descriere</label> 
+					<input class="form-control" style="  height: 30px;width: 200px; background: white; align-content: center; color: pink; font-weight: bold; border-radius:10px" name="descriere" th:value="${about?.descriere}" />
 				</div>
 			</div>
 	
 			<div class="row">
 				<div class="col">
-					<button type="submit" class="btn btn-success btn-block">Add About</button>
+					<button type="submit" class="btn btn-success btn-block" style=" margin-left: 12rem;margin-top: 3rem; height: 30px;width: 300px; background: pink; align-content: center; color: black; font-weight: bold; border-radius:20px">Adauga</button>
 				</div>
 			</div>
-			
-			 
-		</form>
-		
+		 
+		</form>		
 		<tr>
-    <button onclick="window.location.href='about'">
-  Inapoi in sectiunea "Despre Mine"
-</button></tr>
-	</body>
+   <button onclick="window.location.href='about'" style=" margin-left: 40.7rem;margin-top: 1rem; height: 30px;width: 300px; background: pink; align-content: center; color: black; font-weight: bold; border-radius:20px">
+  		Inapoi in sectiunea "Despre Mine"
+	</button></tr>
+</body>
 </html>

@@ -4,54 +4,66 @@
 	layout:decorate="~{layout}">
 <html>
 <head>
+<style>
+  .row {
+  		align-content: center;
+  		text-align-last: center;
+  		 margin-left: 3rem;
+  		 margin-right: 10rem;
+      }
+         .subtitle {
+        color: black;
+        margin-left: 12rem;
+      }
+      </style>
 <meta charset="ISO-8859-1">
-<title>Add Exp</title>
+<title>Adauga in "Experienta"</title>
 </head>
 
 <!-- Content Section -->
 <section layout:fragment="content">
 
 	<body>
-		<h2 class="text-center">Adauga in sectiunea "Experienta"</h2>
+		<h1 style="list-style-type: none;font-weight: bold; color: black; padding-inline-start: 320px; margin-left: 19rem">Adauga in sectiunea "Experienta"</h1>
 		<form action="/addExp" th:object="${exp}" class="form"
 			method="post">
 
 			<div class="row">
-				<div class="form-group col-6">
-					<label>Functie</label> 
-					<input class="form-control" name="functie" th:value="${exp?.functie}" />
-				</div>
+				<div style=" margin-bottom: 1rem">
+					<label  class="subtitle" style="font-size : 20px">Functie</label> 
+					<input style=" margin-left: 1rem; height: 30px;width: 200px; background: white; align-content: center; color: pink; font-weight: bold; border-radius:10px" name="functie" th:value="${exp?.functie}" />
+				</div> 
 			</div>
-			<div class="row">
+			<div class="row" style=" margin-bottom: 1rem">
 				<div class="form-group col-6">
-					<label>Perioada</label> 
-					<input class="form-control" name="perioada" th:value="${exp?.perioada}" />
-				</div>
-			</div>
-			<div class="row">
-				<div class="form-group col-6">
-					<label>Companie</label> 
-					<input class="form-control" name="companie" th:value="${exp?.companie}" />
+					<label class="subtitle" style="font-size : 20px">Perioada</label> 
+					<input style=" margin-left: 0.7rem; height: 30px;width: 200px; background: white; align-content: center; color: pink; font-weight: bold; border-radius:10px" name="perioada" th:value="${exp?.perioada}" />
 				</div>
 			</div>
 			
 			<div class="row">
-				<div class="form-group col-6">
-					<label>Descriere</label> 
-					<input class="form-control" name="descriere" th:value="${exp?.descriere}" />
+				<div style=" margin-bottom: 1rem">
+					<label class="subtitle" style="font-size : 20px">Companie</label> 
+					<input style=" margin-left: 0.2rem; height: 30px;width: 200px; background: white; align-content: center; color: pink; font-weight: bold; border-radius:10px" name="companie" th:value="${exp?.companie}" />
+				</div>
+			</div>
+			
+			<div class="row">
+				<div style=" margin-bottom: 1rem">
+					<label class="subtitle" style="font-size : 20px">Descriere</label> 
+					<input style=" margin-left: 0.4rem; height: 30px;width: 200px; background: white; align-content: center; color: pink; font-weight: bold; border-radius:10px" name="descriere" th:value="${exp?.descriere}" />
 				</div>
 			</div>
 	
-	
 			<div class="row">
 				<div class="col">
-					<button type="submit" class="btn btn-success btn-block">Adauga</button>
+					<button type="submit" class="btn btn-success btn-block" style=" margin-left: 12rem;margin-top: 1rem; height: 30px;width: 300px; background: pink; align-content: center; color: black; font-weight: bold; border-radius:20px">Adauga</button>
 				</div>
 			</div>
 		</form>
 		<tr>
-    <button onclick="window.location.href='exp'">
-  Inapoi in sectiunea "Experienta"
-</button></tr>
+     <button onclick="window.location.href='exp'" style=" margin-left: 40.7rem;margin-top: 1rem; height: 30px;width: 300px; background: pink; align-content: center; color: black; font-weight: bold; border-radius:20px">
+  		Inapoi in sectiunea "Experienta"
+	</button></tr>
 	</body>
 </html>

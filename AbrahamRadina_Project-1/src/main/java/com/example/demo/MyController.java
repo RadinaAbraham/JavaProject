@@ -42,6 +42,7 @@ public class MyController {
 	@Autowired
 	private ExperientaRepo expRepo;
 
+	 String newLine = System.getProperty("line.separator");
 	public DespreMine about = new DespreMine(
 			"My primary goal is to apply my technical expertise all throughout the full development "
 					+ "life cycle to ensure production and delivery of products and services that meet client specifications. "
@@ -58,6 +59,7 @@ public class MyController {
 	public String getAllAbouts(Model model) {
 		List<DespreMine> abouts = despreMineService.getAllAbouts();
 		abouts.add(about);
+		//despreMineRepo.save(about);
 		model.addAttribute("about", abouts);
 		return "about";
 	}
