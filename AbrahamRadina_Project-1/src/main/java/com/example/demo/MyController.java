@@ -56,7 +56,7 @@ public class MyController {
 	
 	@RequestMapping("/about")
 	public String getAllAbouts(Model model) {
-		despreMineRepo.save(about);
+		//despreMineRepo.save(about);
 		List<DespreMine> abouts = despreMineService.getAllAbouts();
 		abouts.add(about);
 		model.addAttribute("about", abouts);
