@@ -53,13 +53,12 @@ public class MyController {
 					+ "Deliver small programs, features, modules, and project components in a timely and cost - effective manner.\r\n"
 					+ "Good knowledge of Object-Oriented principles and knowledge of Clean Code.\r\n"
 					+ "Demonstrate strong problem solving and interpersonal skills.");
-
 	
 	@RequestMapping("/about")
 	public String getAllAbouts(Model model) {
+		despreMineRepo.save(about);
 		List<DespreMine> abouts = despreMineService.getAllAbouts();
 		abouts.add(about);
-		//despreMineRepo.save(about);
 		model.addAttribute("about", abouts);
 		return "about";
 	}
