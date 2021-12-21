@@ -1,12 +1,10 @@
 package com.example.demo;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -41,24 +39,10 @@ public class MyController {
 
 	@Autowired
 	private ExperientaRepo expRepo;
-
-	 String newLine = System.getProperty("line.separator");
-	public DespreMine about = new DespreMine(
-			"My primary goal is to apply my technical expertise all throughout the full development "
-					+ "life cycle to ensure production and delivery of products and services that meet client specifications. "
-					+ "Along with a competent developing team, and with strong personal knowledge and skills, I am positive that this"
-					+ " goal can be achieved. One of my objectives is to keep updated with the latest IT trends and technologies.",
-			"Eager to improve my knowledge and experience as a developer, being suitable for a company that wants to train an employee according to its own requirements.\r\n"
-					+ "Able to adapt and adjust according to every situation.\r\n"
-					+ "Deliver small programs, features, modules, and project components in a timely and cost - effective manner.\r\n"
-					+ "Good knowledge of Object-Oriented principles and knowledge of Clean Code.\r\n"
-					+ "Demonstrate strong problem solving and interpersonal skills.");
 	
 	@RequestMapping("/about")
 	public String getAllAbouts(Model model) {
-		//despreMineRepo.save(about);
 		List<DespreMine> abouts = despreMineService.getAllAbouts();
-		abouts.add(about);
 		model.addAttribute("about", abouts);
 		return "about";
 	}
@@ -85,19 +69,10 @@ public class MyController {
 		return "addAbout";
 	}
 
-	public Competente comp = new Competente("C++");
-	public Competente comp1 = new Competente("Java & SpringBoot");
-	public Competente comp2 = new Competente("C#");
-	public Competente comp3 = new Competente("SQL");
-
 	@GetMapping("/comp")
 	public String getCompetente(Model model) {
 
 		List<Competente> competente1 = compService.getAllComp();
-		competente1.add(comp);
-		competente1.add(comp1);
-		competente1.add(comp2);
-		competente1.add(comp3);
 		model.addAttribute("comp", competente1);
 		return "comp";
 	}
@@ -123,17 +98,11 @@ public class MyController {
 	public void updateComp(@RequestBody Competente comp, @PathVariable Long id) {
 		compService.updateComp(id, comp);
 	}
-
-	public Experienta exp = new Experienta("Sales Assistant", "07/2019 – 06/2021", "Pandora", "Jewellery Consultant");
-	public Experienta exp1 = new Experienta("Intern", "07/2021 – Present", "Rubico",
-			"The focus is on refactoring the C++ core of Tekla Structures.");
 	
 	@GetMapping("/exp")
 	public String getExperiente(Model model) {
 
 		List<Experienta> experiente = expService.getAllExp();
-		experiente.add(exp);
-		experiente.add(exp1);
 		model.addAttribute("exp", experiente);
 		return "exp";
 	}
@@ -160,26 +129,11 @@ public class MyController {
 		expService.updateExp(id, exp);
 	}
 
-	public List<Educatie> educatii = new ArrayList<>();
-
-	public Educatie edu = new Educatie("High School", "Matematica-Informatica",
-			"Colegiul National de Informatica 'Grigore Moisil'", "2015-2019");
-	{
-		educatii.add(edu);
-	}
-
-	public Educatie edu1 = new Educatie("Bachelor's degree", "Informatica",
-			"Universitatea Transilvania - Facultatea de Matematica si Informatica", "2019-2022");
-	{
-		educatii.add(edu1);
-	}
 	
 	@GetMapping("/edu")
 	public String getEducatii(Model model) {
 
 		List<Educatie> educatii = eduService.getAllEdu();
-		educatii.add(edu);
-		educatii.add(edu1);
 		model.addAttribute("edu", educatii);
 		return "edu";
 	}
