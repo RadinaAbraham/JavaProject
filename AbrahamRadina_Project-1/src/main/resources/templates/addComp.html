@@ -17,33 +17,37 @@
       }
       </style>
 <meta charset="ISO-8859-1">
-<title>Adauga in "Competente"</title>
+<title>Add in "Technical Skills"</title>
 </head>
 
 <!-- Content Section -->
 <section layout:fragment="content">
 
 	<body>
-		<h1 style="list-style-type: none;font-weight: bold; color: black; padding-inline-start: 320px; margin-left: 19rem">Adauga in sectiunea "Competente"</h1>
+		<h1 style="list-style-type: none;font-weight: bold; color: black; padding-inline-start: 320px; margin-left: 19rem">Add in "Technical Skills" section</h1>
 		<form action="/addComp" th:object="${comp}" class="form"
 			method="post">
 
 			<div class="row">
-				<div class="form-group col-6" style=" margin-bottom: 1rem">
-					<label class="subtitle" style="font-size : 20px">Scop</label> 
+				<div style=" margin-bottom: 0.5rem">
+					<label class="subtitle" style="font-size : 20px">Skill</label> 
 					<input style=" margin-left: 2rem; height: 30px;width: 200px; background: white; align-content: center; color: pink; font-weight: bold; border-radius:10px" name="aptitudine" th:value="${comp?.aptitudine}" />
 				</div>
 			</div>
 	
 			<div class="row">
 				<div class="col">
-					<button type="submit" class="btn btn-success btn-block" style=" margin-left: 12rem;margin-top: 1rem; height: 30px;width: 300px; background: pink; align-content: center; color: black; font-weight: bold; border-radius:20px">Adauga</button>
+					<button type="submit" style=" margin-left: 12rem;margin-top: 1rem; height: 30px;width: 150px; background: pink; align-content: center; color: black; font-weight: bold; border-radius:20px">Adauga</button>
 				</div>
 			</div>
 		</form>
 		<tr>
-   <button onclick="window.location.href='comp'" style=" margin-left: 40.7rem;margin-top: 1rem; height: 30px;width: 300px; background: pink; align-content: center; color: black; font-weight: bold; border-radius:20px">
-  Inapoi in sectiunea "Competente"
+   <button onclick="window.location.href='comp'" style=" margin-left: 40.7rem;margin-top: 3rem; height: 30px;width: 300px; background: pink; align-content: center; color: black; font-weight: bold; border-radius:20px">
+  Back to "Technical Skills" section
 </button></tr>
+<tr>
+   <button onclick="window.location.href='http://localhost:8080/'" style=" margin-left: 40.7rem;margin-top: 1rem; height: 30px;width: 300px; background: pink; align-content: center; color: black; font-weight: bold; border-radius:20px">
+  		Back to Home Page
+	</button></tr>
 	</body>
 </html>

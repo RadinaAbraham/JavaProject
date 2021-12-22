@@ -17,53 +17,57 @@
       }
       </style>
 <meta charset="ISO-8859-1">
-<title>Adauga in "Experienta"</title>
+<title>Add in "Experience"</title>
 </head>
 
 <!-- Content Section -->
 <section layout:fragment="content">
 
 	<body>
-		<h1 style="list-style-type: none;font-weight: bold; color: black; padding-inline-start: 320px; margin-left: 19rem">Adauga in sectiunea "Experienta"</h1>
+		<h1 style="list-style-type: none;font-weight: bold; color: black; padding-inline-start: 320px; margin-left: 20rem">Add in "Experience" section</h1>
 		<form action="/addExp" th:object="${exp}" class="form"
 			method="post">
 
 			<div class="row">
 				<div style=" margin-bottom: 1rem">
-					<label  class="subtitle" style="font-size : 20px">Functie</label> 
+					<label  class="subtitle" style="font-size : 20px">Job Title</label> 
 					<input style=" margin-left: 1rem; height: 30px;width: 200px; background: white; align-content: center; color: pink; font-weight: bold; border-radius:10px" name="functie" th:value="${exp?.functie}" />
 				</div> 
 			</div>
 			<div class="row" style=" margin-bottom: 1rem">
 				<div class="form-group col-6">
-					<label class="subtitle" style="font-size : 20px">Perioada</label> 
-					<input style=" margin-left: 0.7rem; height: 30px;width: 200px; background: white; align-content: center; color: pink; font-weight: bold; border-radius:10px" name="perioada" th:value="${exp?.perioada}" />
+					<label class="subtitle" style="font-size : 20px">Period</label> 
+					<input style=" margin-left: 2rem; height: 30px;width: 200px; background: white; align-content: center; color: pink; font-weight: bold; border-radius:10px" name="perioada" th:value="${exp?.perioada}" />
 				</div>
 			</div>
 			
 			<div class="row">
 				<div style=" margin-bottom: 1rem">
-					<label class="subtitle" style="font-size : 20px">Companie</label> 
-					<input style=" margin-left: 0.2rem; height: 30px;width: 200px; background: white; align-content: center; color: pink; font-weight: bold; border-radius:10px" name="companie" th:value="${exp?.companie}" />
+					<label class="subtitle" style="font-size : 20px">Company</label> 
+					<input style=" margin-left: 0.7rem; height: 30px;width: 200px; background: white; align-content: center; color: pink; font-weight: bold; border-radius:10px" name="companie" th:value="${exp?.companie}" />
 				</div>
 			</div>
 			
 			<div class="row">
 				<div style=" margin-bottom: 1rem">
-					<label class="subtitle" style="font-size : 20px">Descriere</label> 
+					<label class="subtitle" style="font-size : 20px">Desciption</label> 
 					<input style=" margin-left: 0.4rem; height: 30px;width: 200px; background: white; align-content: center; color: pink; font-weight: bold; border-radius:10px" name="descriere" th:value="${exp?.descriere}" />
 				</div>
 			</div>
 	
 			<div class="row">
 				<div class="col">
-					<button type="submit" class="btn btn-success btn-block" style=" margin-left: 12rem;margin-top: 1rem; height: 30px;width: 300px; background: pink; align-content: center; color: black; font-weight: bold; border-radius:20px">Adauga</button>
+					<button type="submit" style=" margin-left: 12rem;margin-top: 1rem; height: 30px;width: 150px; background: pink; align-content: center; color: black; font-weight: bold; border-radius:20px">Add</button>
 				</div>
 			</div>
 		</form>
 		<tr>
-     <button onclick="window.location.href='exp'" style=" margin-left: 40.7rem;margin-top: 1rem; height: 30px;width: 300px; background: pink; align-content: center; color: black; font-weight: bold; border-radius:20px">
-  		Inapoi in sectiunea "Experienta"
+     <button onclick="window.location.href='exp'" style=" margin-left: 40.7rem;margin-top: 3rem; height: 30px;width: 300px; background: pink; align-content: center; color: black; font-weight: bold; border-radius:20px">
+  		 Back to "Experience" section
+	</button></tr>
+	<tr>
+   <button onclick="window.location.href='http://localhost:8080/'" style=" margin-left: 40.7rem;margin-top: 1rem; height: 30px;width: 300px; background: pink; align-content: center; color: black; font-weight: bold; border-radius:20px">
+  		Back to Home Page
 	</button></tr>
 	</body>
 </html>
